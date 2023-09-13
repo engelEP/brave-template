@@ -1,0 +1,67 @@
+.Advantages{
+    background-color: $white;
+    font-family: $lato-font;
+    padding: 125px 0;
+    &-container{
+        display: flex;
+        justify-content: space-around;
+    }
+    &-card{
+        border: 1px solid $border-card;
+        border-radius: .5rem;
+        height: 100%;
+        max-width: 390px;
+        margin-right: 15px;
+        min-height: 420px;
+        padding: 30px;
+        transition: 450ms ease-in-out;
+        width: 100%;
+        &:hover{
+            background-color: $white-dark;
+            border-color: $white-dark;
+        }
+
+        & i {
+            color: $black;
+            display: block;
+            font-size: 48px;
+            margin-bottom: 15px;
+            max-width: 300px;
+            margin: 30px auto;
+            text-align: left;
+        }
+    }
+    &-title{
+        color: $black-text;
+        font-size: 24px;
+        font-weight: 400;
+        margin-bottom: 30px;
+        max-width: 300px;
+        margin: 30px auto;
+        text-transform: capitalize;
+        text-align: left;
+        width: 100%;
+    }
+    &-text{
+        border-top: 1px solid $border-blog;
+        color: $gray;
+        font-size: 18px;
+        font-weight: 300;
+        line-height: 1.5;
+        max-width: 300px;
+        margin: auto;
+        padding-top: 30px;
+        width: 100%;
+    }
+    @include media-breakpoint-down(xl){
+        &-container{
+            flex-wrap: wrap;
+        }
+        &-card{
+            max-width: 340px;
+            min-height: 350px;
+            margin-bottom: 30px;
+            width: 100%;
+        }
+    }
+}

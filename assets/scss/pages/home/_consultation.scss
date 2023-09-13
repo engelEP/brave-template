@@ -1,0 +1,58 @@
+.Consultation{
+    background: $linear-gradient;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 80px;
+    &-container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    &-title{
+        color: $yellow;
+        font-size: 48px;
+        font-family: $oswald-font;
+        font-weight: 400;
+        letter-spacing: 0.06em;
+        line-height: 1.3;
+        margin-bottom: 20px;
+        text-transform: uppercase;
+    }
+    &-subtitle{
+        color: $white;
+        display: block;
+        letter-spacing: 0.02em;
+        text-transform: none;
+    }
+    &-link{
+        background-color: $transparent;
+        border: 1px solid $white;
+        color: $white;
+        &:hover{
+            background-color: $purple-dark;
+            border: 1px solid $purple-dark;
+        }
+    }
+    @include media-breakpoint-down(lg){
+        padding: 80px 25px;
+        &-title{
+            font-size: 36px;
+        }
+    }
+    @include media-breakpoint-down(md){
+        display: flex;
+        flex-direction: column;
+        &-container{
+            margin-bottom: 30px;
+        }
+        &-title{
+            font-size: 24px;
+            text-align: center;
+        }
+        &-subtitle{
+            font-size: 18px;
+            text-align: center;
+        }
+    }
+}

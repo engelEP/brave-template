@@ -1,0 +1,189 @@
+.Footer{
+    background-color: $black-text;
+    padding: 50px 70px;
+    &-container{
+        margin-bottom: 40px;
+    }
+    &-card{
+        padding: 15px;
+    }
+    &-title{
+        color: $white;
+        font-size: 24px;
+        font-family: $oswald-font;
+        font-weight: 400;
+        margin: 0 0 30px;
+        letter-spacing: 0.12rem;
+        text-transform: uppercase;
+    }
+    &-text{
+        color: $white;
+        font-size: 18px;
+    }
+    &-gallery{
+        display: flex;
+    }
+    &-img{
+        overflow: hidden;
+        position: relative;
+        padding: 5px;
+        & > img{
+            object-fit: cover;
+            max-width: 100px;
+            width: 100%;
+        }
+        & i{
+            color: $white;
+            font-size: 14px;
+            left: 50%;
+            opacity: 0;
+            position: absolute;
+            transition: all .1s ease-in-out;
+            transform: translate(-50%, -50%);
+            top: 50%;
+            z-index: 10;
+        }
+        &::after{
+            background-color: rgba($purple, 0.7);;
+            bottom: 0;
+            content: '';
+            height: 100%;
+            left: 0;
+            opacity: 0;
+            position: absolute;
+            transition: all .25s ease;
+            width: 100%;
+        }
+        &:hover{
+            &::after, & i{
+                opacity: 1;
+            }
+        }
+    }
+    &-item{
+        margin-bottom: 25px;
+        & i{
+            color: $pink;
+            font-size: 18px;
+            margin-right: 12px;
+        }
+    }
+    &-link{
+        color: $white;
+        font-family: $lato-font;
+        font-weight: 300;
+        font-size: 18px;
+        letter-spacing: 0.02rem;
+        line-height: 1.5;
+        text-decoration: none;
+        &:hover{
+            color: $purple;
+            transition: all .5s ease;
+        }
+    }
+    &-line{
+        display: block;
+        margin-left: 35px;
+    }
+    &-icons{
+        & i{
+            color: $border-card;
+            margin-right: 35px;
+            transition: all .22s ease;
+            &.facebook:hover{
+                color: $facebook-color;
+            }
+            &.twitter:hover{
+                color: $twitter-color;
+            }
+            &.instagram:hover{
+                color: $pink;
+            }
+            &.google:hover{
+                color: $google-color;
+            }
+            &.linkedin:hover{
+                color: $linkedin-color;
+            }
+        }
+    }
+    &-form{
+        align-items: center;
+        justify-content: center;
+        &-group{
+            background: $border-blog;
+            border-radius: 0 2.1rem 2.1rem 0;
+        }
+    }
+    &-input{
+        border-radius: 2.1rem 0 0 2.1rem;
+        border: none;
+        background: $border-blog;
+        box-shadow: none;
+        color: $gray;
+        font-size: 18px;
+        padding: 12px 15px;
+        text-align: left;
+        width: 100%;
+        &:focus-visible{
+            outline: none;
+        }
+    }
+    &-button{
+        background-color: $pink;
+        border: none;
+        color: $white;
+        max-width: 200px;
+        padding: 13.5px 0;
+        &:hover{
+            background-color: $purple;
+        }
+    }
+    &-nav{
+        border-top: 1px solid $footer-nav-border;
+        display: flex;
+        font-size: 18px;
+        font-family: $oswald-font;
+        font-weight: 200;
+        justify-content: space-between;
+        padding-top: 40px;
+        &-wrapper{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            max-width: 720px;
+            width: 100%;
+        }
+        &-link{
+            color: $white;
+            letter-spacing: .1em;
+            text-transform: uppercase;
+            text-decoration: none;
+            &:hover{
+                color: $purple;
+                transition: all .22s ease;
+            }
+        }
+        &-text{
+            color: $gray;
+            font-family: $lato-font;
+            font-weight: 300;
+            font-size: 18px;
+            letter-spacing: 0.02em;
+            text-decoration: none;
+            &:hover a{
+                color: $white;
+                transition: all .22s ease;
+            }
+        }
+    }
+    @include media-breakpoint-down(xl){
+        padding: 50px 15px;
+        &-nav{
+            flex-direction: column;
+            &-wrapper{
+                margin-bottom: 20px;
+            }
+        }
+    }
+}
