@@ -1,0 +1,24 @@
+.Title{
+    color: $black-text;
+    font-size: 48px;
+    font-weight: 400;
+    font-family: $oswald-font;
+    letter-spacing: 0.06em;
+    margin-bottom: 40px;
+    position: relative;
+    padding-bottom: 40px;
+    text-transform: uppercase;
+    text-align: left;
+    &::after{
+        background: linear-gradient(to right, $pink 50%, $purple 120%);
+        bottom: 0;
+        content: '';
+        height: 3px;
+        left: 0;
+        position: absolute;
+        width: 100px;
+    }
+    @include media-breakpoint-down(md){
+        font-size: 24px;
+    }
+}

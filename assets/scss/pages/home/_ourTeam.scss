@@ -1,0 +1,50 @@
+.OurTeam{
+    background-color: $white;
+    padding: 125px 0;
+    &-title{
+        margin-bottom: 70px;
+        text-align: center;
+        &::after{
+            bottom: 0;
+            left: 0;
+            margin: auto;
+            right: 0;
+        }
+    }
+    &-container{
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+    }
+    &-img{
+        border-radius: 50%;
+        margin-bottom: 22px;
+        object-fit: cover;
+    }
+    &-link{
+        color: $pink;
+        font-weight: 400;
+        text-decoration: none;
+        &:hover{
+            color: $purple;
+            transition: all .22s ease;
+        }
+    }
+    &-text{
+        color: $gray;
+        font-size: 18px;
+        font-style: italic;
+        margin-bottom: 20px;
+        & i{
+            color: $border-card;
+            &:hover{
+                color: $pink;
+                transition: all .22s ease;
+            }
+        }
+    }
+    &-list{
+        margin: auto;
+        max-width: 200px;
+    }
+}

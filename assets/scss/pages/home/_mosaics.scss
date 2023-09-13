@@ -1,0 +1,33 @@
+.Mosaics{
+    background-color: $white;
+    &-container{
+        align-items: center;
+        display: flex;
+        justify-content: center;
+    }
+    &-content{
+        max-width: 570px;
+        width: 100%;
+    }
+    &-text{
+        font-size: 18px;
+    }
+    &-link{
+        background-color: $pink;
+        color: $white;
+        &:hover{
+            background-color: $purple;
+            color: $white;
+            transition: all .03s ease;
+        }
+    }
+    @include media-breakpoint-down(lg){
+        &-container{
+            padding: 30px;
+        }
+        &-column{
+            display: flex;
+            flex-direction: column-reverse;
+        }
+    }
+}

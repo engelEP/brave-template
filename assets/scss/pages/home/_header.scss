@@ -1,0 +1,151 @@
+.Header{
+    background-color: $white;
+    font-family: $oswald-font;
+    justify-content: space-between;
+    padding: 0 30px;
+    position: sticky;
+    box-shadow: 0 0 12px 1px rgba($black, 0.25);
+    top: 0;
+    z-index: 15;
+    &-logo{
+        max-width: 130px;
+        width: 100%;
+    }
+    &-nav{
+        display: flex;
+        justify-content: space-between;
+    }
+    &-wrapper{
+        display: flex;
+        justify-content: space-between;
+    }
+    &-item{
+        padding: 42px 0;
+        position: relative;
+    }
+    &-link{
+        color: $black-header;
+        font-size: 18px;
+        font-weight: 400;
+        letter-spacing: .1rem;
+        text-decoration: none;
+        text-transform: uppercase;
+    }
+    &-item > a ~ i{
+        color: $gray;
+        font-size: 14px;
+    }
+    &-link::after{
+        background-color: $pink;
+        bottom: 0;
+        content: '';
+        height: 3px;
+        left: 0;
+        position: absolute;
+        width: 0;
+    }
+    &-item:hover &-link{
+        color: $pink;
+        text-decoration: none;
+        & ~ i{
+            color: $pink;  
+        }
+        &::after{
+            transition: all .25s ease;
+            width: 75%;
+        }
+    }
+    &-icon{
+        color: $black;
+        font-size: 22px;
+        text-decoration: none;
+        & .number{
+            font-size: 18px;
+            margin-left: 10px;
+        }
+    }
+    &-icon:hover{
+        color: $pink;
+        & .number{
+            color: $pink;
+        }
+    }
+    &-select{
+        a{
+            color: $pink;
+            & ~ i{
+                color: $pink;
+            }
+            &::after{
+                width: 75%;
+            }
+        }
+    }
+
+    &-hamburger{
+        display: none;
+    }
+
+    @include media-breakpoint-down(xl){
+        height: 60px;
+        padding: 0;
+        &-hamburger{
+            color: $black;
+            display: block;
+            font-size: 40px;
+        }
+        &-nav{
+            justify-content: space-between;
+            align-items: center;
+        }
+        &-wrapper{
+            background-color: $white;
+            box-shadow: 5px 5px 12px 0 rgba($black, 0.25);
+            flex-direction: column;
+            height: 100vh;
+            justify-content: flex-start;
+            left: 0;
+            padding: 10px 0;
+            overflow: hidden;
+            position: absolute;
+            top: 100%;
+            transition: all 0.3s ease;
+            transform: translateX(-120%);
+            width: 35%;
+            z-index: 10;
+        }
+        &-item{
+            padding: 20px 15px;
+            display: flex;
+            justify-content: space-between;
+            &:hover{
+                background-color: $purple;
+            }
+        }
+        &-item:hover &-link{
+            color: $white;
+            &::after{
+                width: 0;
+            }
+            & ~ i{
+                color: $white;  
+            }
+        }
+        &-hamburgerCheck:checked ~ &-wrapper{
+            transform: translateX(0);
+            overflow-y: scroll;
+        }
+        &-select{
+            background-color: $purple;
+            a{
+                color: $white;
+                & ~ i{
+                    color: $white;
+                }
+                &::after{
+                    width: 0;
+                }
+            }
+        }
+    }
+}

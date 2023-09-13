@@ -1,0 +1,38 @@
+.AboutUs{
+    background-color: $border-blog;
+    padding: 125px 0;
+
+    &-container{
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    &-img{
+        max-width: 720px;
+        object-fit: cover;
+        width: 100%;
+    }
+    &-content{
+        max-width: 570px;
+        padding: 0 15px;
+        width: 100%;
+    }
+    &-link{
+        background-color: $white;
+        color: $black;
+        &:hover{
+            background-color: $purple;
+            color: $white;
+            transition: all .03s ease;
+        }
+    }
+    @include media-breakpoint-down(xl){
+        &-container{
+            flex-direction: column-reverse;
+            align-items: center;
+        }
+        &-content{
+            margin-bottom: 30px;
+        }
+    }
+}

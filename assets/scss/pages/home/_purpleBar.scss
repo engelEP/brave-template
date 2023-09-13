@@ -1,0 +1,30 @@
+.PurpleBar{
+    background: $linear-gradient;
+    padding: 30px;
+    &-text{
+        color: $white;
+        line-height: 1.5;
+        text-align: center;
+    }
+    &-icon{
+        background-color: $purple;
+        display: inline-block;
+        font-size: 16px;
+        font-weight: 700;
+        margin-right: 18px;
+        padding: 5px 18px;
+        text-transform: capitalize;
+    }
+    &-link{
+        color: $yellow;
+        font-weight: 700;
+        text-decoration: none;
+        transition: color .5s ease;
+        &:hover{
+            color: $white;
+        }
+    }
+    &-bold{
+        font-weight: 700;
+    }
+}
